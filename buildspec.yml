@@ -34,4 +34,5 @@ phases:
       - cat imagedefinitions.json
 artifact:
   files:
-    -imagedefinitions.json
+    - imagedefinitions.json
+    - target/app.jar
