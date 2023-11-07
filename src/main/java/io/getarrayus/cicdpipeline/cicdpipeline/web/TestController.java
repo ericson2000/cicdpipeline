@@ -19,7 +19,7 @@ public class TestController {
 
     @GetMapping(path = "/test")
     public ResponseEntity<Map<String,String>> test(){
-        return ResponseEntity.ok().body(Map.of("Testing", "Up and running"));
+        return ResponseEntity.ok().body(Map.of("Testing", "Updated and running"));
     }
 
     @GetMapping(path = "/health")
