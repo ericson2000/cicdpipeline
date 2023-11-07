@@ -2,7 +2,7 @@ FROM maven:3.9.3 as build
 WORKDIR /app
 COPY pom.xml /app
 RUN mvn dependency:resolve
-COPY src/test/java/io/getarrayus/cicdpipeline/cicdpipeline /app
+COPY . /app
 RUN mvn clean
 RUN mvn package
 
