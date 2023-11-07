@@ -4,7 +4,7 @@ COPY pom.xml /app
 RUN mvn dependency:resolve
 COPY src/test/java/io/getarrayus/cicdpipeline/cicdpipeline /app
 RUN mvn clean
-RUN mvn package -DskipTests -X
+RUN mvn package
 
 FROM openjdk:17
 COPY --from=build /app/target/*.jar app.jar
